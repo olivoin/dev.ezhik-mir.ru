@@ -1,0 +1,162 @@
+.content-wrap-posts .post{
+    background: #fff;
+}
+
+.content-wrap-posts {
+    width: calc(75% - 20px);
+}
+
+#sidebar {
+    width: calc(25% - 20px);
+}
+
+#sidebar [class*=sidebar-] {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-social ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sidebar-social .menu-item ._svg {
+    width: 2em;
+}
+
+.sidebar-social .menu-item span {
+    display: none;
+}
+
+#sidebar .widgettitle {
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 4px;
+}
+
+#sidebar .sidebar-search .widgettitle {
+    display: none;
+}
+
+.sidebar-instagram-full ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sidebar-instagram-full ul li {
+    width: calc(33.333% - 5px);
+    margin-bottom: 5px;
+}
+
+.sidebar-tags .tagcloud {
+    text-align: left;
+}
+
+.sidebar-tags .tagcloud a {
+    color: #828393;
+    display: inline-block;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #efefef;
+    font-size: 16px !important;
+    margin-bottom: 5px;
+}
+
+.sidebar-tags .tagcloud a:hover {
+    background-color: #828393;
+    color: #efefef;
+}
+
+.sidebar-popular li {
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+
+.sidebar-popular li:hover {
+    background: #fafafa;
+    
+    border-radius: 4px;
+}
+
+.sidebar-popular a {
+    color: #828393;
+    text-decoration: none;
+}
+
+/* content */
+
+.content-wrap-posts .post {
+    margin-bottom: 40px;
+}
+
+.content-wrap-posts .post:last-child {
+    margin-bottom: 0;
+}
+
+.content-wrap-posts .post,
+.content-wrap-posts .post a{
+    color: #121212;
+}
+
+.content-wrap-posts .post .post-quote {
+    color: #828282;
+}
+
+.post-image {
+    position: relative;
+    min-height: 250px;
+    background: url(../images/placeholder.png) center center;
+    background-color: #F1EFF0;
+}
+
+.post-image img {
+    margin-bottom: -4px;
+}
+
+.post-cat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.content-wrap-posts .post-cat a {
+    color: #fff;
+}
+
+.content-wrap-posts .post-header {
+    padding: 20px;
+}
+
+.post-tags {
+    padding: 20px;
+    color: #898989;
+}
+
+.content-wrap-posts .post-tags a {
+    color: #898989;
+}
+
+.post-tags a {
+    position: relative;
+    margin-left: 13px;
+}
+
+.post-tags a:before {
+        content: '#';
+    position: absolute;
+    left: -9px;
+    top: 1px;
+}
+
+.content-wrap-posts .post-tags a:hover,
+.content-wrap-posts .post-tags:hover{
+    color: #121212;
+}

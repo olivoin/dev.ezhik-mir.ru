@@ -1,0 +1,154 @@
+.front-posts {
+    margin-bottom: 40px;
+}
+
+.front-posts-main .post,
+.front-posts-second .post {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.front-posts-main .post {
+    height: 500px;
+}
+
+.front-posts-second .post {
+    height: 250px;
+}
+
+
+.front-posts .full-height {
+    background: rgba(0,0,0,0.3);
+    transition: all 200ms ease-in-out;
+    padding: 20px;
+}
+
+.front-posts .full-height:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+/* post */
+
+.post {
+    color: #fff;
+    position: relative;
+    
+}
+
+.post-title {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.post-quote {
+    font-style: italic;
+    color: #d7d7d7;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.post .svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.post-meta-autor {
+    margin-right: 15px;
+}
+
+.post-meta-autor a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.post-meta-autor img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.post-meta-stats li {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.post-meta-stats .svg {
+    margin-right: 4px;
+}
+
+.post-meta-stats-like .svg {
+    fill: #ff4949;
+}
+
+.post-meta-stats-view .svg {
+    fill: #29a5f2;
+}
+
+.post-meta-stats-comment .svg {
+    fill: #67b26a;
+}
+
+.front-posts-second-slider,
+.front-posts-second .bx-wrapper,
+.front-posts-second .bx-viewport{
+    height: 100% !important;
+}
+
+.front-posts-second-slider {
+    background: #D0EAE7;
+}
+
+.front-posts-second-slider li {
+    text-align: center;
+}
+
+.front-posts-second-slider li img {
+    width: 135px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.front-posts-second-slider li {
+    font-size: 16px;
+    color: #000;
+}
+
+.front-posts-second-slider li h3 {
+    font-size: 16px;
+    width: 85%;
+    margin: auto;
+}
+
+/* front-council-more */
+
+.front-council {
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    position: relative;
+    background: #C2DDE5;
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+}
+
+.front-council:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    left: 10px;
+    top: 10px;
+    border: 4px solid rgba(255,255,255,.9);
+}
+
+.front-council-more {
+    position: absolute;
+    bottom: -34px;
+    right: 0;
+    font-size: 20px;
+    font-style: italic;
+    color: #d7d7d7;
+}
