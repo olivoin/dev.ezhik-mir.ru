@@ -1,4 +1,4 @@
-<aside id="sidebar" data-sticky_column>
+<aside id="sidebar">
     <div class="sidebar-search">
         <?php echo do_shortcode('[widget id="mxajaxsearchwidget-2"]'); ?>
     </div>

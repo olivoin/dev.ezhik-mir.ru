@@ -39,19 +39,18 @@
 .post-title {
     font-size: 32px;
     margin: 15px 0;
+    position: relative;
+}
+
+.post-title > * {
+    position: relative;
 }
 
 .post-quote {
     font-style: italic;
-    color: #d7d7d7;
+    color: rgba(255, 255, 255, 0.75);
     margin-bottom: 15px;
     font-size: 14px;
-}
-
-.post .svg {
-    width: 20px;
-    height: 20px;
-    fill: #fff;
 }
 
 .post-meta-autor {
@@ -85,9 +84,11 @@
 
 .post-meta-stats-view .svg {
     fill: #29a5f2;
+    width: 20px;
 }
 
 .post-meta-stats-comment .svg {
+    width: 15px;
     fill: #67b26a;
 }
 

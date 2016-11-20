@@ -117,6 +117,8 @@
 
 .post-image img {
     margin-bottom: -4px;
+    width: 100%;
+    height: auto;
 }
 
 .post-cat {

@@ -42,6 +42,7 @@ remove_action('woocommerce_after_single_product_summary','woocommerce_output_rel
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 remove_action('woocommerce_after_shop_loop_item','woocommerce_template_loop_add_to_cart', 10);
 
+
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
     
@@ -68,45 +69,6 @@ function woocommerce_template_loop_product_thumbnail(){
 //    return '<span class="onsale">SALE -'.$percentage.'%</span>';
 //}; 
 //add_filter( 'woocommerce_sale_flash', 'filter_woocommerce_sale_flash', 10, 3 );
-
-
-// Добавляем атрибуты на единичный товар
-
-/* add_filter( 'woocommerce_single_product_summary', 'woocommerce_single_attr', 10, 2 );
-    function woocommerce_single_attr() {
-    $og = get_field('og');
-    $abv = get_field('abv');
-    $ibu = get_field('ibu');
-    $volume = get_field('volume');
-    $tara_count = get_field('tara_count');
-    echo '
-        <ul class="product-single-attr">
-            <li><span class="katalog-beer-params-title">OG:</span> ' . $og . '</li>
-            <li><span class="katalog-beer-params-title">ABV:</span> ' . $abv . '</li>
-            <li><span class="katalog-beer-params-title">IBU:</span> ' . $ibu . '</li>
-            <li><span class="katalog-beer-params-title">Объем:</span> ' . $volume . '</li>
-            <li><span class="katalog-beer-params-title">Кол-во единиц в таре:</span> ' . $tara_count . '</li>
-        </ul>
-    ';
-    
-} */
-
-
-
-// custom rub
-
-add_filter( 'woocommerce_currencies', 'add_my_currency' );
-function add_my_currency( $currencies ) {
-$currencies['ABC'] = __( 'Российский рубль-хуюбль', 'woocommerce' );
-return $currencies;
-}
-add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
-function add_my_currency_symbol( $currency_symbol, $currency ) {
-switch( $currency ) {
-case 'ABC': $currency_symbol = '&nbsp;руб'; break;
-}
-return $currency_symbol;
-}   
 
 // social 
 
@@ -149,19 +111,17 @@ register_sidebar( array(
 
 // styles and scripts connected 
 
-function my_theme_load_resources() {
-    
-    $theme_uri = get_template_directory_uri();
-    
-    // style connected
-    
-    wp_register_style('my-theme-style', $theme_uri.'/assets/css/production_post.css', false, '1.0');
-    wp_enqueue_style('my-theme-style');
+function enqueue_versioned_script( $handle, $src = false, $deps = array(), $in_footer = false ) {
+	wp_enqueue_script( $handle, get_template_directory_uri() . $src, $deps, filemtime( get_template_directory() . $src ), $in_footer );
+}
 
-    // scripts connected
+function enqueue_versioned_style( $handle, $src = false, $deps = array(), $media = 'all' ) {
+	wp_enqueue_style( $handle, get_template_directory_uri() . $src, $deps = array(), filemtime( get_template_directory() . $src ), $media );
+}
 
-    wp_register_script('my_theme_functions', $theme_uri.'/assets/js/production.min.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('my_theme_functions'); 
-    }
-add_action('wp_enqueue_scripts', 'my_theme_load_resources');
-?>
+function themename_scripts() {
+	enqueue_versioned_style( 'my-theme-style', $theme_uri.'/assets/css/production_post.css' );
+	enqueue_versioned_script( 'my-theme-script', $theme_uri.'/assets/js/production.min.js', array( 'jquery'), true );
+}
+ 
+add_action( 'wp_enqueue_scripts', 'themename_scripts' );

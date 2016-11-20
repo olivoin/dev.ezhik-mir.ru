@@ -16,7 +16,7 @@
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="dis-flex align-items-center"><img src="https://pp.vk.me/c630217/v630217774/31930/UrIRx9JzTBA.jpg" class="margin-r-4"> <?php the_author(); ?></a>
             </li>
             <li class="post-meta-date">
-                <?php the_time(); ?>
+                <?php the_date(); ?>
             </li>
         </ul>
         <a href="#">

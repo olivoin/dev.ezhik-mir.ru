@@ -1,0 +1,12 @@
+.col-2-6 {
+    width: 33.333%;
+}
+
+.row .col-2-6 {
+    width: calc(33% - 20px);
+    margin-right: 34px;
+}
+
+.row .col-2-6:nth-of-type(3) {
+    margin-right: 0;
+}

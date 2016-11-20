@@ -48,9 +48,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     do_action( 'woocommerce_shop_loop_item_title' );
 
     ?>
-    <div class="text-block">
-        <?php the_excerpt(); ?>
-    </div>
+
     <?php 
     /**
      * woocommerce_after_shop_loop_item_title hook.

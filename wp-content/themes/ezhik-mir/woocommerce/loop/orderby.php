@@ -24,14 +24,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="woocommerce-page-head dis-flex flex-wrap-wrap justify-content-between align-items-center">
     
-    
     <?php global $wp_query;
 
     if ( ! woocommerce_products_will_display() )
         return;
     ?>
     
-    <p class="woocommerce-result-count wow hide fadeInUp" data-wow-delay="0.1s">
+    <p class="woocommerce-result-count">
         <?php
         $paged    = max( 1, $wp_query->get( 'paged' ) );
         $per_page = $wp_query->get( 'posts_per_page' );
@@ -47,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         ?>
     </p>
 
-    <form class="woocommerce-ordering wow hide fadeInUp" data-wow-delay="0.2s" method="get">
+    <form class="woocommerce-ordering" method="get">
         <select name="orderby" class="orderby">
             <?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
                 <option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
@@ -70,8 +69,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         ?>
     </form>
     
-    <div class="mobile-sort">
+    <!--<div class="mobile-sort">
         <img src="<?php bloginfo('template_url'); ?>/assets/images/katalog/controls.svg" class="svg">
-    </div>
+    </div>-->
     
 </div>

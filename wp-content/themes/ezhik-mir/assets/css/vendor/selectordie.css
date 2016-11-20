@@ -42,8 +42,8 @@
         line-height: 1;
 
         width: 100%;
-        padding: 15px 40px 15px 10px;
-        border: 1px solid #C0AA61;
+        padding: 10px 20px 10px 10px;
+        border: 1px solid #111;
         color: #fafafa;
         font-size: 11px;
         text-decoration: none;
@@ -72,9 +72,9 @@
             transform: translate(0, 0);
             position: absolute;
             right: 10px;
-            top: 12px;
+            top: 7px;
             font-size: 16px;
-            color: #C0AA61;
+            color: #111;
             -webkit-transition: 0.3s ease all;
        -moz-transition: 0.3s ease all;
         -ms-transition: 0.3s ease all;
@@ -86,12 +86,12 @@
 
     /* Change the border color on hover, focus and when open */
 
-        .sod_select.open { color: #C0AA61; }
+        .sod_select.open { color: #111; }
 
     /* When the entire SoD is disabled, go crazy! */
     .sod_select.disabled
         {
-            color: #C0AA61;
+            color: #111;
             cursor: not-allowed;
         }
 
@@ -102,7 +102,7 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
-            color: #C0AA61;
+            color: #111;
             padding-right: 15px;
         }
 
@@ -171,9 +171,9 @@
             overflow-y: auto;
             padding: 0;
             margin: 0;
-            border-left: 1px solid #C0AA61;
-            border-bottom: 1px solid #C0AA61;
-            border-right: 1px solid #C0AA61;
+            border-left: 1px solid #111;
+            border-bottom: 1px solid #111;
+            border-right: 1px solid #111;
         }
 
         /* All the options. Keep the first three lines for truncating... */

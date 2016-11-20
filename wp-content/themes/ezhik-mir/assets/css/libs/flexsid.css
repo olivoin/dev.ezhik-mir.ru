@@ -600,11 +600,6 @@
     top: 11px;
 }
 
-.text-block strong {
-    font-weight: 100;
-    color: #fafafa;
-}
-
 .text-block p:last-child {
     margin-bottom: 0;
 }
